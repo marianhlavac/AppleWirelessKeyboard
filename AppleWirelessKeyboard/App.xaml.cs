@@ -48,9 +48,11 @@ namespace AppleWirelessKeyboard
             AppleKeyboardHID2.KeyDown += new AppleKeyboardHID2.AppleHIDKeyboardEventHandler(AppleKeyboardHID_KeyDown);
             AppleKeyboardHID2.KeyUp += new AppleKeyboardHID2.AppleHIDKeyboardEventHandler(AppleKeyboardHID_KeyUp);
 
-            KeyboardListener.HookedKeys.Add(Key.F2);
-            KeyboardListener.HookedKeys.Add(Key.F3);
-            KeyboardListener.HookedKeys.Add(Key.F4);
+            if (!e.Args.Contains("--no-bullshit-keys")) {
+                KeyboardListener.HookedKeys.Add(Key.F2);
+                KeyboardListener.HookedKeys.Add(Key.F3);
+                KeyboardListener.HookedKeys.Add(Key.F4);
+            }
             KeyboardListener.HookedKeys.Add(Key.F7);
             KeyboardListener.HookedKeys.Add(Key.F8);
             KeyboardListener.HookedKeys.Add(Key.F9);

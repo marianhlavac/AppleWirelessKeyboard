@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Windows.Input;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AppleWirelessKeyboard
 {
@@ -72,38 +73,15 @@ namespace AppleWirelessKeyboard
 
         public static void SendPlayPause()
         {
-            Task.Factory.StartNew(() =>
-            {
-                if (iTunesControl.iTunesRunning)
-                    iTunesControl.PlayPause();
-                else
-                    Send(VK_MEDIA_PLAY_PAUSE);
-                NotificationCenter.NotifyPlayPause();
-            });
+            keybd_event((byte)Keys.MediaPlayPause, 0, 0, 0);
         }
 
-        public static void SendNextTrack()
-        {
-            Task.Factory.StartNew(() =>
-            {
-                if (iTunesControl.iTunesRunning)
-                    iTunesControl.NextSong();
-                else
-                    Send(VK_MEDIA_NEXT_TRACK);
-                NotificationCenter.NotifyNext();
-            });
+        public static void SendNextTrack() {
+            keybd_event((byte)Keys.MediaNextTrack, 0, 0, 0);
         }
 
-        public static void SendPreviousTrack()
-        {
-            Task.Factory.StartNew(() =>
-            {
-                if (iTunesControl.iTunesRunning)
-                    iTunesControl.PreviousSong();
-                else
-                    Send(VK_MEDIA_PREV_TRACK);
-                NotificationCenter.NotifyPrevious();
-            });
+        public static void SendPreviousTrack() {
+            keybd_event((byte)Keys.MediaPreviousTrack, 0, 0, 0);
         }
 
         public static void OpenTaskManager()
