@@ -69,6 +69,8 @@ namespace AppleWirelessKeyboard
             KeyboardListener.KeyDown += new KeyboardListener.KeyHookEventHandler(KeyboardListener_KeyDown);
 
             Microsoft.Win32.SystemEvents.PowerModeChanged += new Microsoft.Win32.PowerModeChangedEventHandler(SystemEvents_PowerModeChanged);
+
+            Window.Hide();
         }
 
         void SystemEvents_PowerModeChanged(object sender, Microsoft.Win32.PowerModeChangedEventArgs e)
