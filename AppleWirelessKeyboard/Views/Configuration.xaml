@@ -13,5 +13,6 @@
         <TextBlock Text="When enabled, the function keys, F1 to F12, are Mac special function keys by default (when pressed without the Fn or Eject key held down)." Margin="18,0,0,10" TextWrapping="Wrap" />
         <CheckBox Name="wiredHoldEjectForFn" Content="Emulate Fn with Eject Key (Wired Keyboard Only)" FontWeight="Bold" IsChecked="{Binding Source={StaticResource Settings}, Path=Default.WiredHoldEjectForFn}" />
         <TextBlock Text="Changes the behaviour of the Eject key when the 'Wired Keyboard' option is enabled. Makes the Eject key emulate the Fn key. If enabled, allows holding Eject+[function key] to do the same thing as Fn+[function key] does on a wireless keyboard." Margin="18,0,0,10" TextWrapping="Wrap" />
+        <CheckBox x:Name="EjectFnReverse" Content="Reverse the Eject key behaviour" IsChecked="{Binding Default.WiredHoldEjectReversed, Source={StaticResource Settings}}" Margin="18,0,0.333,0" />
     </StackPanel>
 </Window>

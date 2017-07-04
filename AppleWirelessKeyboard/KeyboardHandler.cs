@@ -47,8 +47,11 @@ namespace AppleWirelessKeyboard
 			bool F;
 			if (AppleWirelessKeyboard.Properties.Settings.Default.WiredKeyboard && 
 				AppleWirelessKeyboard.Properties.Settings.Default.WiredHoldEjectForFn)
-				F = e.ModifierFn && !e.ModifierAnyNative;
-			else
+                if (AppleWirelessKeyboard.Properties.Settings.Default.WiredHoldEjectReversed)
+                    F = !e.ModifierFn && !e.ModifierAnyNative;
+                else
+                    F = e.ModifierFn && !e.ModifierAnyNative;
+            else
 				F = (FMode || e.ModifierFn) && !e.ModifierAnyNative;
 
             switch (e.Key)
