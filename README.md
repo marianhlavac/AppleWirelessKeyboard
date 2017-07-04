@@ -13,13 +13,13 @@ The app:
   - wtf why does it use CoreAudio API instead of just emulating native multimedia keys presses?
 
 So my modification:
-  - **uses native multimedia controls, so you get 👇 THIS NATIVE OSD instead of their fucking ugly custom GUI bleeh**
-    ![OSD](http://i.imgur.com/w2S3bJ6.png)
-  - adds ability to run it without tray icon and without hooking the bullshit F3 and F4 keys, because they are as useful as third nipple
-    ![run](http://i.imgur.com/ATtx5tc.png)
+  - **uses native multimedia controls, so you get 👇 THIS NATIVE OSD instead of their fucking ugly custom GUI bleeh**  
+    ![OSD](http://i.imgur.com/w2S3bJ6.png)  
+  - adds ability to run it without tray icon and without hooking the bullshit F3 and F4 keys, because they are as useful as third nipple  
+    ![run](http://i.imgur.com/ATtx5tc.png)  
   - makes it not fucking poke around in task manager
-  - adds one settings to reverse the behaviour of Fn emulation
-    ![run](http://i.imgur.com/u2K6Q7A.png)
+  - adds one settings to reverse the behaviour of Fn emulation  
+    ![run](http://i.imgur.com/u2K6Q7A.png)  
 
 
 ## Usage and stuff
