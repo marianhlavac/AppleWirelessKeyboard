@@ -22,11 +22,13 @@ namespace AppleWirelessKeyboard
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-			_trayIcon = new TrayIcon(this);
-			_trayIcon.Show();
+            if (!e.Args.Contains("--no-tray")) {
+                _trayIcon = new TrayIcon(this);
+                _trayIcon.Show();
+            }
 
-			// Version check updating disabled because this is a fork and it would obviously 
-			// be bad of us to update this forked version with the original...
+            // Version check updating disabled because this is a fork and it would obviously 
+            // be bad of us to update this forked version with the original...
             //uxsoft.VersionCheck();
 
             if (!StartupShortcut.IsRegistered)
